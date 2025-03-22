@@ -4,18 +4,19 @@
 
 # Discovery of the Optimal Reward Function
 <p align="center">
-Official implementation of <strong>Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents</strong> and scripts to reproduce experiments. This codebase is originated and modified from <a href="https://github.com/vwxyzjn/cleanrl">CleanRL</a>.
+Official implementation of <strong>Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents</strong> and scripts to reproduce experiments.</a>.
 </p>
 
 
 ## Repository Agenda
 
-1. [Install](#Install)
+1. [Install](#install)
 
-2. [Instructions](#Instructions)
+2. [Instructions](#instructions)
 
-3. [Repository Structure](#RepositoryStructure)
+3. [Repository Structure](#repository-structure)
 
+4. [Acknowledgement](#acknowledgement)
 
 ## Install
 
@@ -23,14 +24,12 @@ Prerequisites:
 * Python >=3.7.1, < 3.11
 * Linux, Windows 10/11
 
-
-This repository adopts the installation procedure from CleanRL. 
 To ensure compatibility with the agents, please install the packages listed in `requirements.txt`.
 
 ```
 git clone https://github.com/zhshao17/Discovery-of-Optimal-Reward-function
 .git
-cd Discovery_RF
+cd Discovery-of-Optimal-Reward-function
 pip install -r requirements/requirements.txt
 ```
 
@@ -80,7 +79,7 @@ The detailed structure of this project is shown as follows:
 │   ├── ppo_continuous_action.py                       -- PPO agent
 │   └── sac_continuous_action.py                       -- SAC agent
 ├── casestudy3                                         -- energy management task
-│   ├── README.md                                      -- 
+│   ├── README.md                                      -- file for construct task
 │   ├── test ppo.py                                    -- online test for PPO agent 
 │   ├── test sac.py                                    -- online test for SAC agent 
 │   ├── test_dqn.py                                    -- online test for DQN agent 
@@ -88,7 +87,7 @@ The detailed structure of this project is shown as follows:
 │   ├── train ppo.py                                   -- offline train for PPO agent
 │   └── train sac.py                                   -- offline train for SAC agent
 ├── casestudy4                                         -- unmanned systems control Task
-│   ├── README.md                                      -- 
+│   ├── README.md                                      -- file for construct task
 │   ├── ppo_continuous_action.py                       -- PPO agent
 │   ├── sac_continuous_action.py                       -- SAC agent
 │   ├── td3_continuous_action.py                       -- TD3 agent
@@ -103,3 +102,5 @@ The detailed structure of this project is shown as follows:
     └── reward_model.py                                -- structure for reward function
 ```
 
+## Acknowledgement
+This code is originated and modified from <a href="https://github.com/vwxyzjn/cleanrl">CleanRL.
