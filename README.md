@@ -27,8 +27,7 @@ Prerequisites:
 To ensure compatibility with the agents, please install the packages listed in `requirements.txt`.
 
 ```
-git clone https://github.com/zhshao17/Discovery-of-Optimal-Reward-function
-.git
+git clone https://github.com/zhshao17/Discovery-of-Optimal-Reward-function.git
 cd Discovery-of-Optimal-Reward-function
 pip install -r requirements/requirements.txt
 ```
