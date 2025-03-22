@@ -2,11 +2,11 @@
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-371/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents
+# Discovery of the Optimal Reward Function
 <p align="center">
-Official implementation of *Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents* and scripts to reproduce experiments. This codebase is  originated and modified from [CleanRL](https://github.com/vwxyzjn/cleanrl).
-
+Official implementation of <strong>Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents</strong> and scripts to reproduce experiments. This codebase is originated and modified from <a href="https://github.com/vwxyzjn/cleanrl">CleanRL</a>.
 </p>
+
 
 ## Repository Agenda
 
@@ -28,7 +28,8 @@ This repository adopts the installation procedure from CleanRL.
 To ensure compatibility with the agents, please install the packages listed in `requirements.txt`.
 
 ```
-git clone https://github.com/zhshao17/Discovery_RF.git
+git clone https://github.com/zhshao17/Discovery-of-Optimal-Reward-function
+.git
 cd Discovery_RF
 pip install -r requirements/requirements.txt
 ```
