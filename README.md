@@ -2,7 +2,7 @@
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-371/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# Discovery of the Optimal Reward Function
+# Discovery of Optimal Reward Function
 <p align="center">
 Official implementation of <strong>Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents</strong> and scripts to reproduce experiments.</a>.
 </p>
