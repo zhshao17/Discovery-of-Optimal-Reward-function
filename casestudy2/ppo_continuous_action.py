@@ -84,8 +84,6 @@ class Args:
     num_iterations: int = 0
     """the number of iterations (computed in runtime)"""
 
-    reward_frequency: int = 2048
-    """the frequency of reward updates"""
     hidden_dim: int = 256
     """the number of hidden units in the network"""
     encode_dim: int = 64
@@ -100,8 +98,6 @@ class Args:
     """the buffer size for the reward model"""
     n_samples: int = 1000
     """the number of samples drawn for reward training"""
-    TopN: int = 10
-    """the number of top samples selected"""
     reward_buffer_size: int = 100
     """the size of the reward-specific buffer"""
     
@@ -350,6 +346,8 @@ if __name__ == "__main__":
 
             if args.target_kl is not None and approx_kl > args.target_kl:
                 break
+
+        reward_funciton.optimaze_reward(agent=agent)
 
         y_pred, y_true = b_values.cpu().numpy(), b_returns.cpu().numpy()
         var_y = np.var(y_true)
