@@ -1,4 +1,4 @@
-# Environment and Task Description
+# Energy Management Task
 
 This environment and task are derived from the following research by [Google Research](https://research.google/pubs/data-center-cooling-using-model-predictive-control/).
 
