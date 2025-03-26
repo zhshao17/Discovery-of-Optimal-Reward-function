@@ -1,11 +1,13 @@
-#  Discovery of Optimal Reward Function
+# Discovery of Optimal Reward Function
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/facebookresearch/mtrl/blob/main/LICENSE)  [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-371/)  [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Overview
 
-This repository contains the official implementation of the paper *"Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents"*. 
+This repository contains the official implementation of the paper *"Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents"*.
 It includes scripts and experiments designed to reproduce results from the research.
+
+
 The paper is under peer review.
 
 ## Table of Contents
@@ -48,8 +50,8 @@ For energy management tasks, refer to the documentation from [Google Research](h
 For UAV control tasks, you can install the `pyflyt` package via pip, or follow the setup instructions found [here](casestudy4/README.md):
 
 ```bash
-pip3 install wheel numpy
-pip3 install pyflyt
+pip install wheel numpy
+pip install pyflyt
 ```
 
 ---
@@ -58,11 +60,11 @@ pip3 install pyflyt
 
 ### Running Experiments
 
-To reproduce experiments, such as those from `casestudy1` with the `CartPole-v1` environment, you can execute the following commands:
+To reproduce experiments, for example,  run the method in `CartPole-v1` task in  `casestudy1`, you can execute the following commands:
 
 ```bash
-python dqn.py --env_id CartPole-v1 --total_timesteps 500000
-python ppo.py --env_id CartPole-v1 --total_timesteps 500000
+python ./casestudy1/dqn.py --env_id CartPole-v1 --total_timesteps 500000
+python ./casestudy1/ppo.py --env_id CartPole-v1 --total_timesteps 500000
 ```
 
 Additional optional parameters for tuning experiments are outlined in the appendix of the our paper.
