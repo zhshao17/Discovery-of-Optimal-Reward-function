@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the official implementation of the paper *"Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents"*.
+This repository contains the official implementation of the paper *"Discovery of the Reward Function for Embodied Reinforcement Learning Agents"*.
 It includes scripts and experiments designed to reproduce results from the research.
 
 
