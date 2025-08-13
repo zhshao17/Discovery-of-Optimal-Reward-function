@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the official implementation of the paper *"Discovery of the Optimal Reward Function for Embodied Reinforcement Learning Agents"*. 
+This repository contains the official implementation of the paper *"Discovery of the Reward Function for Embodied Reinforcement Learning Agents"*. 
 It includes scripts and experiments designed to reproduce results from the research.
 The paper is under peer review.
 
@@ -34,7 +34,7 @@ cd Discovery-of-Optimal-Reward-function
 pip install -r requirements/requirements.txt
 ```
 
-For running simulator tasks, the following optional dependencies are recommended:
+For simulator tasks, the following optional dependencies are recommended:
 
 ```bash
 # Optional dependencies
@@ -43,31 +43,64 @@ pip install -r requirements/requirements-mujoco_py.txt
 pip install -r requirements/requirements-envpool.txt
 ```
 
-For energy management tasks, refer to the documentation from [Google Research](https://research.google/pubs/data-center-cooling-using-model-predictive-control/) and the [related README](casestudy3/README.md).
+For energy management tasks, refer to the documentation from [Google Research](https://research.google/pubs/data-center-cooling-using-model-predictive-control/) and the [README](casestudy3/README.md).
 
-For UAV control tasks, you can install the `pyflyt` package via pip, or follow the setup instructions found [here](casestudy4/README.md):
+For UAV control tasks, install the `pyflyt` package via pip:
 
-```bash
+**Linux and MacOS**
+
+Installation on _Linux_ and _MacOS_ is simple:
+```sh
 pip3 install wheel numpy
 pip3 install pyflyt
 ```
+> `numpy` and `wheel` must be installed prior to `pyflyt` such that `pybullet` is built with `numpy` support.
+
+**Windows**
+
+Follow the setup instructions in [here](casestudy4/README.md) before installing the `pyflyt` package on _Windows_.
+
+
+
 
 ---
 
 ## Usage Instructions
 
-### Running Experiments
+### Running Casestudy1 and Casestudy2
 
-To reproduce experiments, such as those from `casestudy1` with the `CartPole-v1` environment, you can execute the following commands:
+To reproduce experiments, such as the `CartPole-v1` task in `casestudy1`, you can execute the following commands:
 
 ```bash
 python dqn.py --env_id CartPole-v1 --total_timesteps 500000
 python ppo.py --env_id CartPole-v1 --total_timesteps 500000
 ```
 
-Additional optional parameters for tuning experiments are outlined in the appendix of the our paper.
 
-All experiments are run in parallel across five instances, with error metrics calculated for each.
+### Running Casestudy3
+
+To reproduce experiments like `DQN`, you can execute the following commands:
+
+```bash
+python dqn_train.py --number_epochs 200 
+```
+
+After training, execute the following commands:
+
+```bash
+python dqn_test.py --train False
+```
+
+### Running Casestudy4
+
+To reproduce experiments, you can execute the following commands:
+
+```bash
+python sac_continuous_action.py --env_id PyFlyt/QuadX-Waypoints-v3 --total_timesteps 1000000
+```
+
+
+Additional optional parameters for tuning experiments are outlined in the Supplementary Information.
 
 ---
 
@@ -84,13 +117,13 @@ The directory structure of this repository is as follows:
 │   ├── ppo_continuous_action.py                       # PPO agent
 │   └── sac_continuous_action.py                       # SAC agent
 ├── casestudy3                                         # Energy management task
+│   ├── dqn_test.py                                    # Online test for DQN agent 
+│   ├── dqn_train.py                                   # Offline training for DQN agent 
+│   ├── ppo_test.py                                    # Online test for PPO agent 
+│   ├── ppo_train.py                                   # Offline training for PPO agent
 │   ├── README.md                                      # Task setup instructions
-│   ├── test_ppo.py                                    # Online test for PPO agent 
-│   ├── test_sac.py                                    # Online test for SAC agent 
-│   ├── test_dqn.py                                    # Online test for DQN agent 
-│   ├── train_dqn.py                                   # Offline training for DQN agent 
-│   ├── train_ppo.py                                   # Offline training for PPO agent
-│   └── train_sac.py                                   # Offline training for SAC agent
+│   ├── sac_test.py                                    # Online test for SAC agent 
+│   └── sac_train.py                                   # Offline training for SAC agent
 ├── casestudy4                                         # Unmanned systems control task
 │   ├── README.md                                      # Task setup instructions
 │   ├── ppo_continuous_action.py                       # PPO agent
